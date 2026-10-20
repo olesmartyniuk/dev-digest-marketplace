@@ -1,0 +1,51 @@
+name: Release
+
+# Manual release of one plugin. Bump `version` in the plugin's plugin.json and
+# merge to main first; this workflow tags that version and creates a GitHub Release.
+on:
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: Plugin directory name under plugins/ (e.g. example-plugin)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate
+        run: claude plugin validate . --strict
+      - name: Read plugin version
+        id: meta
+        env:
+          PLUGIN: ${{ inputs.plugin }}
+        run: |
+          set -euo pipefail
+          manifest="plugins/${PLUGIN}/.claude-plugin/plugin.json"
+          test -f "$manifest" || { echo "Unknown plugin: $PLUGIN"; exit 1; }
+          version=$(node -p "require('./${manifest}').version")
+          echo "tag=${PLUGIN}--v${version}" >> "$GITHUB_OUTPUT"
+      - name: Create and push tag
+        env:
+          PLUGIN: ${{ inputs.plugin }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          claude plugin tag "plugins/${PLUGIN}" --push
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.meta.outputs.tag }}
+        run: gh release create "$TAG" --title "$TAG" --generate-notes

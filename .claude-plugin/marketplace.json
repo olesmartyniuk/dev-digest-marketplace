@@ -1,0 +1,12 @@
+{
+  "name": "dev-digest-marketplace",
+  "description": "Claude Code plugins for the team",
+  "owner": { "name": "Oleksandr" },
+  "plugins": [
+    {
+      "name": "example-plugin",
+      "source": "./plugins/example-plugin",
+      "description": "Plugin template with one skill and one subagent"
+    }
+  ]
+}

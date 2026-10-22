@@ -18,6 +18,21 @@ claude plugin marketplace add ./
 
 Changes are picked up after `/reload-plugins`.
 
+## Catalog site
+
+`site/` holds a static catalog (search, cards, install commands) published to GitHub Pages by
+`.github/workflows/pages.yml`. It indexes every plugin, skill and agent automatically, so adding a plugin
+needs no site changes. One-time setup: Settings > Pages > Source = GitHub Actions.
+
+```
+cd site
+npm test                 # unit + integration tests
+npm run build:index      # writes public/search-index.json from plugins/
+npm run serve            # then open the printed URL
+```
+
+Search quality depends on each skill/agent `description`, so write it in English and name the situations it applies to.
+
 ## Adding a new plugin
 
 1. Create `plugins/<name>/.claude-plugin/plugin.json` plus `skills/` and `agents/`.

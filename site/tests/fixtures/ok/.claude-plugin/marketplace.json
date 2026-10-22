@@ -1,0 +1,8 @@
+{
+  "name": "fixture-marketplace",
+  "owner": { "name": "Test" },
+  "plugins": [
+    { "name": "alpha", "source": "./plugins/alpha", "description": "Alpha plugin from marketplace entry" },
+    { "name": "beta", "source": "./plugins/beta", "description": "Beta plugin" }
+  ]
+}

@@ -1,0 +1,20 @@
+name: Request a new skill
+description: Ask for a skill, agent or plugin that the marketplace does not have yet.
+title: "Skill request: "
+labels: ["skill-request"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need?
+      description: Describe the task in your own words. This is usually what you searched for on the site.
+      placeholder: e.g. a skill that reviews a diff for security problems
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Example use case
+      description: When would you use it? What would you expect Claude to do?
+    validations:
+      required: false

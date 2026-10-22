@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: onion-service-with-sql-and-concrete-adapter
+context:
+  add_dirs: [resources]

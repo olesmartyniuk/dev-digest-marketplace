@@ -1,0 +1,8 @@
+{
+  "name": "research-tools",
+  "description": "Read-only researcher agent that answers from the project or the web with a locator for every claim",
+  "version": "1.0.0",
+  "author": { "name": "Oleksandr" },
+  "license": "MIT",
+  "keywords": ["research", "agent", "read-only"]
+}

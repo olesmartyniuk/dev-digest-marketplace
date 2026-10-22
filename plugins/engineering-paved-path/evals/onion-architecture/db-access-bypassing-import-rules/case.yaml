@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: onion-db-access-bypassing-import-rules
+context:
+  add_dirs: [resources]

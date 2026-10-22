@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: onion-cycle-cross-module-and-env-switch
+context:
+  add_dirs: [resources]

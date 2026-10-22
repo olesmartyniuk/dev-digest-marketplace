@@ -1,0 +1,13 @@
+{
+  "name": "sdd-engineering",
+  "description": "Spec-driven development pipeline: write a spec, plan, implement, review architecture and verify against the plan",
+  "version": "1.0.0",
+  "author": { "name": "Oleksandr" },
+  "license": "MIT",
+  "keywords": ["spec-driven-development", "agents", "planning", "workflow"],
+  "dependencies": [
+    { "name": "engineering-paved-path", "version": "^1.0.0" },
+    { "name": "research-tools", "version": "^1.0.0" },
+    { "name": "architecture-review", "version": "^1.0.0" }
+  ]
+}

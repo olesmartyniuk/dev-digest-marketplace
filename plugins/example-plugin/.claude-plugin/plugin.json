@@ -1,6 +1,0 @@
-{
-  "name": "example-plugin",
-  "description": "Plugin template with one skill and one subagent",
-  "version": "0.1.0",
-  "author": { "name": "Oleksandr" }
-}

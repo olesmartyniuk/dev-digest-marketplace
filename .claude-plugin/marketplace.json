@@ -4,9 +4,24 @@
   "owner": { "name": "Oleksandr" },
   "plugins": [
     {
-      "name": "example-plugin",
-      "source": "./plugins/example-plugin",
-      "description": "Plugin template with one skill and one subagent"
+      "name": "engineering-paved-path",
+      "source": "./plugins/engineering-paved-path",
+      "description": "Paved-path engineering skills: React, Next.js, Fastify, onion architecture, React Testing Library and security"
+    },
+    {
+      "name": "research-tools",
+      "source": "./plugins/research-tools",
+      "description": "Read-only researcher agent that answers from the project or the web with a locator for every claim"
+    },
+    {
+      "name": "architecture-review",
+      "source": "./plugins/architecture-review",
+      "description": "Read-only architecture reviewer agent that checks layering and dependency direction and cites file, quote and rule"
+    },
+    {
+      "name": "sdd-engineering",
+      "source": "./plugins/sdd-engineering",
+      "description": "Spec-driven development pipeline: write a spec, plan, implement, review architecture and verify against the plan"
     }
   ]
 }

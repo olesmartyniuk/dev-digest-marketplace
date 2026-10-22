@@ -6,7 +6,7 @@ Claude Code plugin marketplace for the team.
 
 ```
 claude plugin marketplace add <org>/dev-digest-marketplace
-claude plugin install example-plugin@dev-digest-marketplace
+claude plugin install sdd-engineering@dev-digest-marketplace
 ```
 
 ## Local development

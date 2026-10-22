@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       plugin:
-        description: Plugin directory name under plugins/ (e.g. example-plugin)
+        description: Plugin directory name under plugins/ (e.g. sdd-engineering)
         required: true
         type: string
 

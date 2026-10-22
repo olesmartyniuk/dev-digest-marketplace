@@ -78,7 +78,7 @@ plugins/
 
 `plugin.json` is the source of truth for `name`, `version`, `description`, `author`. The marketplace entry carries `name`,
 `source`, `description` (kept identical). Version lives only in `plugin.json`, so the two cannot drift
-(the existing `example-plugin` follows the same rule).
+(the same rule the removed `example-plugin` template followed).
 
 `sdd-engineering/.claude-plugin/plugin.json`:
 
@@ -137,7 +137,7 @@ The three dependency plugins get short READMEs (what they contain, install, whic
 
 ## Docs
 
-Each plugin has `README.md` (entry point, as in `example-plugin`) plus a `docs/` folder for depth. `docs/` is outside every
+Each plugin has `README.md` (entry point) plus a `docs/` folder for depth. `docs/` is outside every
 component path, so the loader ignores it (the docs do not state this explicitly; verified by `validate --strict` in acceptance).
 
 | Plugin | `docs/` content |

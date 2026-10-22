@@ -1,0 +1,12 @@
+{
+  "name": "dev-digest-catalog-site",
+  "private": true,
+  "type": "module",
+  "description": "Static catalog site for dev-digest-marketplace (GitHub Pages)",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:index": "node scripts/build-index.mjs --out public/search-index.json",
+    "test": "node --test",
+    "serve": "npx --yes serve public"
+  }
+}

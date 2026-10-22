@@ -1,0 +1,1 @@
+{ "name": "broken-marketplace", "owner": { "name": "Test" }, "plugins": [ { "name": "gamma", "source": "./plugins/gamma", "description": "Gamma" } ] }
